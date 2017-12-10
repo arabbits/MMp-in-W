@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>产品分类</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header" class="header">
+    <div class="logo">
+      <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+    </div>
+    <div class="adddown">
+      <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <section id="search">
+    <form action="#">
+      <input type="text" placeholder="请输入你要是搜索的商品">
+      <input type="button" value="搜索">
+    </form>
+  </section>
+
+  <main class="category-main">
+    <div class="row clearfix">
+      <ul class="father">
+        <!-- <li>
+          <a href="#">大家电</a>
+          <ul class="sons clearfix">
+            <li><a href="#">电视</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">电视</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">大家电</a>
+        </li>
+        <li>
+          <a href="#">大家电</a>
+        </li>
+        <li>
+          <a href="#">大家电</a>
+        </li> -->
+      </ul>
+    </div>
+  </main>
+  
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  {{each result as v i}}
+  <li >
+      <a class="temp" data-id="{{v.titleId}}" href="#">{{v.title}}</a>
+      <ul class="sons clearfix hide">
+        <!-- 坑中坑 -->
+      </ul>
+    </li>
+    {{/each}}
+</script>
+
+
+<!-- 填坑第二个 -->
+<script type="text/html" id="tmp2">
+  {{each result as v i}}
+  <li>
+    <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">
+      {{v.category}}
+    </a>
+  </li>
+  {{/each}}
+</script>
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/category.js"></script>

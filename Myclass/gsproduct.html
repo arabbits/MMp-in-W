@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>凑单品</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="head clearfix">
+    <div class="back fl">
+      <a href="coupon.html" class="icon-back"></a>
+    </div>
+    <h1>凑单品</h1>
+    <div class="home">
+      <a href="javascript:;" class="icon-app"></a>
+    </div>
+  </div>
+
+
+  <main class="gsproduct-main">
+    <div class="hand clearfix">
+      <div class="title fl">
+        <ul class="clearfix">
+          <li class="fl">
+            <a class="shit0" href="#">
+                京东
+              <i></i>
+            </a>
+          </li>
+          <li class="fl">
+            <a class="shit1" href="#">
+                  华北
+                <i></i>
+              </a>
+          </li>
+          <li class="fl">
+            <a class="shit2" href="#">
+                  全部价格
+                <i></i>
+              </a>
+          </li>
+        </ul>
+      </div>
+      <div class="search fl">
+        <span class="icon-search"></span>
+      </div>
+      <!-- 我有各式各样的下拉框 -->
+      <div class="jd-select fuck ">
+        <!-- 第yi个 -->
+      </div>
+      <div class="huabei-select  fuck">
+        <!-- 第二个 -->
+      </div>
+      <div class="all-select fuck">
+        <ul class="all">
+          <li><a href="#">全部价格 </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gsproduct-list">
+      <!-- 最大的坑 -->
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 填坑第二个 -->
+<!-- 华北 -->
+<script type="text/html" id="tmp">
+  <ul>
+    {{each result as v i}}
+    <li data-areaId="{{v.areaId}}"><a href="#">{{v.areaName}} </a></li>
+    {{/each}}
+  </ul>
+</script>
+
+
+<!-- 填坑第一个 -->
+<!-- 京东 -->
+<script type="text/html" id="tmp2">
+  <ul>
+    {{each result as v i}}
+    <li data-shopId='{{v.shopId}}'><a href="#">{{v.shopName}} </a></li>
+    {{/each}}
+  </ul>
+
+</script>
+<script type="text/html" id="tmp3">
+  <ul class="container clearfix">
+      {{each result as v i}}
+      <li>
+        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+          <div class="pic"><img src="{{v.productImg}}" style="width: 174px; height: 174px;"></div>
+          <div class="title">{{v.productName}}</div>
+          <div class="other clearfix">
+            <div class="price fl">{{v.productPrice}}</div>
+            <div class="btn fr">去凑单</div>
+            <!-- <div class="clearfix"></div> -->
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+</script>
+
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/gsproduct.js"></script>

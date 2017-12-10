@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>白菜价</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="head clearfix">
+    <div class="back fl">
+      <a href="inlanddiscount.html" class="icon-back"></a>
+    </div>
+    <h1>白菜价-淘宝内部券</h1>
+    <div class="home">
+      <a href="javascript:;" class="icon-app"></a>
+    </div>
+  </div>
+
+
+
+
+  <main id="main">
+    <div class="bcj-nav">
+      <div class="bcj-title">
+        <div class="bcj-wrap">
+          <!-- 当行的坑 -->
+        </div>
+      </div>
+      <div class="searchbtn">
+        <div class="icon-search">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bcj-list">
+     <!-- 大坑 -->
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom clearfix">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  <ul class="clearfix">
+      {{each result as v i }}
+      
+    <li class="{{i==0?'active' : ''}}">
+      <a href="baicaijia.html?titleid={{v.titleId}}">{{v.title}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</script>
+
+<script type="text/html" id="tmp2">
+   <ul class="clearfix">
+      {{each result as v i }}
+        <li class="ui-border-tb ">
+          <div class="pic">
+            {{#v.productImg}}
+            <!-- <img src="http://seller.manmanbuy.com/ProPic/2016100009230957088.jpg" alt=""> -->
+          </div>
+          <div class="inf">
+            <div class="i">
+              <div class="t">
+                {{#v.productName}}
+                <!-- <p>[包邮]双十一红包 今日开启</p> -->
+              </div>
+              <div class="pr">
+                {{#v.productPrice}}
+                <!-- <i class="ss">券后</i>
+                <i>￥</i>10.0
+                <del>￥0</del> -->
+              </div>
+            </div>
+            <div class="o">
+              {{#v.productCouponRemain}}
+              <!-- <div class="bar">
+                <em></em>
+                <span>1%</span>
+                <b>已领取82张</b>
+              </div> -->
+              <div class="b clearfix">
+                <span class="q">{{#v.productCoupon}}</span>
+                <span class="g">{{#v.productHref}}</span>
+                <!-- {{#v.productHref}} -->
+              </div>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+</script>
+
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+
+<script src="js/tools.js"></script>
+<script src="js/baicaijia.js"></script>

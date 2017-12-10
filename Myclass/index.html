@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header" class="header">
+    <div class="logo">
+      <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+    </div>
+    <div class="adddown">
+      <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <section id="search">
+    <form action="#">
+      <input type="text" placeholder="请输入你要是搜索的商品">
+      <input type="button" value="搜索">
+    </form>
+  </section>
+  <section id="menu">
+    <div class="row clearfix">
+      <!-- 挖坑埋人 -->
+    </div>
+  </section>
+  <!-- 超值折扣 -->
+  <section id="recommen" class="list-title">
+    <div class="list-title-content">
+      <span>超值折扣推荐</span>
+      <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </div>
+  </section>
+  <!-- main内容 -->
+  <div id="recommen-product">
+    <div class="recommen-product-list product-list cu-list">
+      <!-- 再次挖坑 -->
+    </div>
+  </div>
+  <!-- 品牌排行 -->
+  <section class="list-title">
+    <div class="list-title-content">
+      <span>品牌排行</span>
+      <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </div>
+  </section>
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  {{each result as v i}}
+  <div class="menu-item {{i>7? 'hide':''}} {{i==7? 'fash':''}}">
+    <a href="{{v.titlehref}}">
+        {{#v.img}}
+        <p>{{v.name}}</p>
+    </a>
+  </div>
+  {{/each}}
+</script>
+
+
+<!-- 填坑第二个 -->
+<script type="text/html" id="tmp2">
+   <ul>
+      {{each result as value i}}
+      <li class="clearfix">
+        <a href="moneyproduct.html?productid={{value.productId}}">
+          <div class="pic">
+              {{#value.productImgSm}}
+          </div>
+          <div class="info clearfix">
+            <div class="title">{{value.productName}}<span>{{value.productPinkage}}</span></div>
+            <div class="clearfix icons">
+              <span class="fr">{{value.productFrom}} | {{value.productTime}}</span>
+              <span class="comment">
+                <i class="icon-comment"></i>
+                {{value.productComCount.replace("有","").replace("人评论","")}}
+              </span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="more-bar">
+      <a href="#">更多优惠信息 »</a>
+    </div>
+</script>
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/index.js"></script>

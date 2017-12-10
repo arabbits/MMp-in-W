@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>国内折扣</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/discount.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="head clearfix">
+    <div class="back fl">
+      <a href="inlanddiscount.html" class="icon-back"></a>
+    </div>
+    <h1>国内折扣</h1>
+    <div class="home">
+      <a href="javascript:;" class="icon-app"></a>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom clearfix">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  {{each result as v i }}
+  <div class='mupro-content'>
+    <h3>{{v.productName}}</h3>
+    <div class='info'>
+      <span>{{v.productFrom
+          }}</span>
+      <span>{{v.productTime}}</span>
+      <span>{{v.productTips}}</span>
+    </div>
+    <div class="contents clearfix">
+      <div class="pro-pic fr">
+        <!-- {{#v.productImgSm}} -->
+        <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg" alt="">
+      </div>
+      <div class="conn">
+        <p>
+          {{v.productInfo}}
+        </p>
+        <p>{{v.productInfo1}}</p>
+        <p>
+          {{#v.productImg}}
+        </p>
+      </div>
+    </div>
+    <div class="area">
+      <!-- wakeng -->
+         {{#v.productCity}}
+    </div>
+    <div class="promon-shop">
+      <a href="#">前往购买</a>
+    </div>
+  </div>
+  <div style="text-align: center; margin: 20px 10px;">
+      <img src="images/mmbweixin2.png" style="width: 100%; height: auto;">
+  </div>
+  {{#v.productComment}}
+  {{/each}}
+</script>
+
+
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+
+<script src="js/tools.js"></script>
+<script src="js/discount.js"></script>

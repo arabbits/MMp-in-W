@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>产品列表</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/productlist.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header" class="header">
+    <div class="logo">
+      <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+    </div>
+    <div class="adddown">
+      <a href="javascript:;">
+                <img src="images/header_app.png" alt="">
+            </a>
+    </div>
+  </header>
+  <!-- 搜索 -->
+  <section id="search">
+    <form action="#">
+      <input type="text" placeholder="请输入你要是搜索的商品">
+      <input type="button" value="搜索">
+    </form>
+  </section>
+
+  <main class="product-main clearfix">
+    <div class="main-head ">
+      <!-- 第一个小坑 -->
+    </div>
+    <div class="main-content">
+      <ul class="conters">
+        <!-- 第二个大坑 -->
+      </ul>
+    </div>
+    <!-- 分页功能 -->
+    <div class="main-footer clearfix">
+      <span class="w33 fl">
+        <a href="#" class="prev">上一页</a>
+      </span>
+      <span class="w33 fl">
+        <select>
+          <!-- <option value="">1/3</option> -->
+        </select>
+      </span>
+      <span class="w33 fl">
+        <a href="#" class="next">下一页</a>
+      </span>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom clearfix">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  {{each result as v i }}
+  <a href="index.html" class="product-head">首页</a>>
+  <a href="category.html" class="product-all">全部分类</a>>
+  <a href="#" class="product-cate">{{v.category}}</a>>
+  <a href="#" class="product-search">筛选</a>
+  {{/each}}
+</script>
+
+
+<!-- 填坑第二个 -->
+<script type="text/html" id="tmp2">
+  {{each result as v i }}
+  <li>
+      <a  href="bijia.html?productid={{v.categoryId}}&brandName={{v.brandName}}">
+        <div class="pro-pic">
+          {{#v.productImg}}
+        </div>
+        <div class="pro-info">
+          <div class="tit">{{v.productName}}</div>
+          <div class="price">{{v.productPrice}}</div>
+          <div class="money">
+            <span class="le">{{v.productQuote}}</span>
+            <span class="lt">{{v.productCom}}</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+</script>
+
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/productlist.js"></script>
+<script src="js/tools.js"></script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>国内折扣</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/inlanddiscount.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="head clearfix">
+    <div class="back fl">
+      <a href="index.html" class="icon-back"></a>
+    </div>
+    <h1>国内折扣</h1>
+    <div class="home">
+      <a href="javascript:;" class="icon-app"></a>
+    </div>
+  </div>
+
+  <main>
+    <div class="inland-container">
+      
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <!-- 底部 -->
+  <footer id="footer">
+    <div class="footer-top clearfix">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+      <a href="#" style="width:40%; border:0">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15" alt="">
+                返回顶部
+            </a>
+    </div>
+    <div class="footer-bottom clearfix">
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+</body>
+
+<!-- 开始埋坑 -->
+<script type="text/html" id="tmp">
+  <ul class="clearfix">
+    {{each result as v i }}
+      <li class="fl ">
+        <a href="discount.html?productid={{v.productId}}">
+          <div class="img">
+          {{#v.productImg}}
+          </div>
+          <div class="inland-tit">{{v.productName}}</div>
+          <div class="inland-price">{{v.productPrice}}</div>
+          <div class="inland-flover">{{v.productFrom}} | {{v.productTime}}</div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+</script>
+
+
+</html>
+<script src="lib/artTemplate/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+
+<script src="js/tools.js"></script>
+<script src="js/inlanddiscount.js"></script>

@@ -1,0 +1,25 @@
+.coupon-main {
+  background-color: #fff;
+}
+.coupon-main ul {
+  height: 2.5rem;
+  padding: .25rem 0;
+  font-size: .3rem;
+}
+.coupon-main ul li {
+  float: left;
+  margin: .125rem 0 0 .125rem;
+  padding-top: .125rem;
+  border: 1px solid #cccccc;
+  height: 1.875rem;
+  width: 22%;
+  text-align: center;
+}
+.coupon-main ul li a {
+  display: block;
+}
+.coupon-main ul li a img {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+}

@@ -1,0 +1,157 @@
+.container {
+  background-color: #fff;
+}
+.container > .mupro-content {
+  padding: .1rem .25rem;
+  font-size: 14px;
+}
+.container > .mupro-content > h3 {
+  font-size: .45rem;
+  margin-top: .25rem;
+  margin-bottom: .125rem;
+  font-weight: 800;
+  color: #5a5a5a;
+}
+.container > .mupro-content > .info {
+  margin: .425rem 0 ;
+  font-size: .3rem;
+  color: #999999;
+  padding-left: .1rem;
+}
+.container > .mupro-content > .info > span {
+  margin-right: .1rem;
+}
+.container > .mupro-content > .contents > .pro-pic {
+  width: 3rem;
+  margin: .3rem 0 0 .25rem;
+  overflow: hidden;
+}
+.container > .mupro-content > .contents > .pro-pic > img {
+  width: 3rem;
+  height: 3rem;
+}
+.container > .mupro-content > .contents > .conn {
+  padding-bottom: .5rem;
+}
+.container > .mupro-content > .contents > .conn p {
+  margin: .15rem 0;
+  font-size: 16px;
+  line-height: .6rem;
+  color: #606060;
+}
+.container > .mupro-content > .contents > .conn p > img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+.container > .mupro-content > .area {
+  text-align: center;
+}
+.container > .mupro-content > .promon-shop {
+  width: 100%;
+}
+.container > .mupro-content > .promon-shop > a {
+  display: block;
+  margin: .5rem .25rem;
+  height: .75rem;
+  text-align: center;
+  line-height: .75rem;
+  background: #ff9900;
+  border-radius: .125rem;
+  color: #ffffff;
+}
+.area {
+  position: relative;
+  text-align: center;
+  margin: .5rem auto;
+  width: 3.45rem;
+}
+.area ul li {
+  font-size: .3rem;
+  line-height: .5rem;
+}
+.area ul li span {
+  border-bottom: 1px dashed #c0c0c0;
+  display: block;
+  padding: 0 .25rem;
+  text-align: left;
+}
+.area ul li span strong {
+  float: right;
+  font-weight: normal;
+  color: #f27b04;
+}
+.tit {
+  padding: .15rem .2rem;
+  font-size: .4rem;
+}
+.reply {
+  padding: .15rem .2rem;
+}
+.reply > .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+.reply > .form > textarea {
+  width: 100%;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  outline: 0;
+  color: #666;
+  height: 68px;
+}
+.reply > .form > .ctrl {
+  text-align: right;
+}
+.reply > .form > .ctrl input {
+  width: 2.5rem;
+  height: 1rem;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: .4rem;
+  border: none;
+}
+.ui-border-b {
+  padding: .45rem .25rem;
+  font-size: .35rem;
+}
+.ui-border-b .userimg {
+  float: left;
+  width: 1rem;
+  height: 1rem;
+}
+.ui-border-b .userimg > img {
+  width: 40px;
+  background-position: top;
+  border-radius: 20px;
+  height: 40px;
+}
+.ui-border-b .con {
+  overflow: hidden;
+  padding-left: 10px;
+}
+.ui-border-b .con > .name {
+  margin-bottom: 6px;
+}
+.ui-border-b .con > .name > .username {
+  float: left;
+  color: #5997c0;
+}
+.ui-border-b .con > .name > .time {
+  float: right;
+  color: #999999;
+}
+.ui-border-b .con .content {
+  word-break: break-all;
+  font-size: 15px !important;
+  color: #606060;
+  line-height: 20px;
+}
