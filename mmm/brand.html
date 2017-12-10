@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-十大品牌排行</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common1.css">
+  <link rel="stylesheet" href="./css/brand.css">
+  <script src="./js/rem.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="m-header">
+      <img class="left fl middle-y-self" src="./images/header_logo.png" alt="">
+      <img class="right fr" src="./images/header_app.png" alt="">
+    </div>
+    <!-- 搜索区域 -->
+    <div class="m-search">
+      <form>
+        <input type="text" class="txt" placeholder="请输入您想比价的商品">
+        <input type="button" class="fr btn_search" value="搜索">
+      </form>
+    </div>
+
+    <!-- 导航区域 -->
+    <div class="m-nav">
+      <ul class="clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+          <a href="category.html">全部分类 ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 热门品牌排行标签 -->
+    <div class="m-tips tip1">热门品牌排行</div>
+
+    <!-- 品牌列表 -->
+    <div class="m-category">
+      <ul>
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+        <!-- 大坑 -->
+      </ul>
+    </div>
+
+    <!-- 销量排行 -->
+    <div class="m-sales">
+      <h3 class="m-tips tip2">平板电视产品销量排行</h3>
+      <div class="product">
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+        <!-- 销量的坑 -->
+      </div>
+    </div>
+
+    <div class="m-newcomments">
+      <h3 class="m-tips tip3">平板电视产品最新评论</h3>
+      <div class="product">
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+        <!-- 评论区的坑 -->
+      </div>
+    </div>
+
+    <!-- 底部的上部区域 -->
+    <div class="footer-top">
+      <ul class="container">
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+        <li class="backTop">
+          <a href="#">
+            <span><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""></span> 
+            返回顶部
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 底部的下部区域 -->
+    <div class="footer">
+      <p>
+        <span class="app"><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="index.html">慢慢买手机版</a></span> -- 掌上比价平台
+      </p>
+      <p class="address">m.manmanbuy.com</p>
+    </div>
+
+  </div>
+
+  <!-- 返回顶部 -->
+  <div class="goTop">
+    <img src="./images/top1.png" alt="">
+  </div>
+
+
+
+  <!-- 十大品牌的模板 -->
+  <script type="text/html" id="contentTpl">
+    {{each result as v i}}
+    <li>
+      <a href="productlist.html?categoryid={{ v.categoryId }}&pageid=1">
+        <span class="rank" data-index="{{ i+1 }}">{{ i+1 }}</span>
+        <span class="rightArrow">
+          <img src="./images/arrow-right.svg" alt="">
+        </span>            
+        <div class="brandInfo">
+          <p class="title2">{{ v.brandName }}</p>
+          <p class="info">{{ v.brandInfo }}</p>
+        </div>
+        </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 商品销量列表的模板 -->
+  <script type="text/html" id="productTpl">
+    {{each result as v i}}
+    <div class="item" data-productid="{{ i==0? v.productId:'' }}">
+      <a href="bijia.html?categoryid={{ v.categoryId }}&productid={{ v.productId }}&productname={{ v.productName }}">
+        {{ #v.productImg }}
+        <div class="product_info">
+          <p class="info txt-cut">{{ v.productName }}</p>
+          <p class="price">{{ v.productPrice }}</p>
+          <p class="other">
+            <span>{{ v.productQuote }}</span>
+            <span>{{ v.productCom }}</span>
+          </p>
+          <span class="stars">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+          </span>
+        </div>
+      </a>
+    </div>
+    {{/each}}
+  </script>
+
+
+  <!-- 商品评论图片的模板 -->
+  <script type="text/html" id="productwrapTpl">
+    <div class="item">
+      <a href="#">
+        {{ #productImg }}
+        <div class="product_info">
+          <p class="info">{{ productName }}</p>
+          <p class="price">{{ productPrice }}</p>
+          <p class="other">
+            <span>{{ productQuote }}</span>
+            <span>{{ productCom }}</span>
+          </p>
+          <span class="stars">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+            <img src="./images/star.svg" alt="">
+          </span>
+        </div>
+      </a>
+    </div>
+  </script>
+
+  <!-- 商品评论内容的模板 -->
+  <script type="text/html" id="commentTpl">
+    {{each result as v i}}
+    <div class="list">
+      <div class="top">
+        <div class="imgWrap">
+          <img src="" alt="">
+        </div>
+        <p class="info"></p>
+      </div>
+      <div class="comment">
+        <div class="title">
+          <span class="time">{{ v.comTime }}</span>
+          <span class="author clearfix">
+                 <i>{{ v.comName }}：</i>
+                 <img src="./images/star.svg" alt="">
+                 <img src="./images/star.svg" alt="">
+                 <img src="./images/star.svg" alt="">
+                 <img src="./images/star.svg" alt="">
+                 <img src="./images/star.svg" alt="">
+             </span>
+        </div>
+        <div class="content">{{ v.comContent }}</div>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brand.js"></script>
+</body>
+
+</html>

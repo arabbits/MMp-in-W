@@ -26,7 +26,7 @@ $(function() {
         console.log(productid);
         Route.getproduct( productid[0], function( res ) {
             var result = res.result;
-            console.log(result);
+            
             for (var j = 0; j < result.length; j++) {
                 Route.getproductcom( productid[0], function( resPro ) {
                     var data = resPro.result;

@@ -1,0 +1,153 @@
+
+html,body {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+}
+
+.container {
+  width: 100%;  
+  height: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.m-header {
+  height: 1.5rem;
+  background-color: #ff841d;
+
+  a {
+
+    span {
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem;
+      float: left;
+      line-height: 1.5rem;
+      text-align: center;
+      font-size: .65rem;
+      font-weight: lighter;
+      color: #fff;
+    }
+  }
+
+  > .right {
+    height: .9rem;
+    width: .9rem;
+    margin-top: .3rem;
+    margin-right: .25rem;
+  }
+
+  h3 {
+    font-size: .7rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+
+.footer-top {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: .75rem;
+  
+  ul {
+    overflow: hidden;
+  }
+
+  li a {
+    display: block;
+    color: #111111;
+    float: left;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #ccc;
+  }
+
+  li:last-child a {
+    border-right: 0;
+  }
+
+  img {
+    width: .45rem;
+    height: .45rem;
+    display: inline-block;
+    position: relative;
+    bottom: .075rem;
+  }
+}
+
+.footer {
+  padding: 15px 0;
+  text-align: center;
+
+  p {
+    a {
+      color: #111111;
+    }
+
+    .app a {
+      color: red;
+    }
+  }
+}
+
+//切换页面的按钮
+.changePages {
+  overflow: hidden;
+  margin: .75rem 0; 
+
+  span {
+    text-align: center;
+    display: inline-block;
+    font-size: .35rem;
+    
+    a {
+      background-image: linear-gradient(#eee,#ccc);
+      padding: .2rem .625rem;
+      // box-shadow: 0 0 3px 0 #E68383;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: inline-block;
+      color: #000;
+      font-size: .4rem;
+    }
+
+    select {
+      padding: 0 .625rem;
+      height: 1.1rem;
+      // border-radius: .125rem;
+      border: 1px solid #ccc;  
+      font-size: .45rem;
+      text-align: center;
+    }
+  }
+}
+
+.goTop {
+  height: 1.25rem;
+  width: 1.5rem;
+  position: fixed;
+  top:auto;
+  bottom: .75rem;
+  right: .75rem;
+  display: none;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.loading {
+  width: 50px;
+  margin: 100px auto;  
+
+  img {
+    width: 100%;
+  }
+}

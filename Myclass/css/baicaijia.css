@@ -4,9 +4,9 @@
 }
 #main .bcj-nav > .bcj-title {
   height: 40px;
+  overflow: hidden;
 }
 #main .bcj-nav > .bcj-title .bcj-wrap {
-  overflow: hidden;
   width: 100%;
   height: .95rem;
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-比价页商品详情</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common1.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+  <script src="./js/rem.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="m-header">
+      <img class="left fl middle-y-self" src="./images/header_logo.png" alt="">
+      <img class="right fr" src="./images/header_app.png" alt="">
+    </div>
+
+    <!-- 导航区域 -->
+    <div class="m-nav">
+      <a href="#" class="select">筛选</a>
+      <ul class="clearfix">
+        <li>
+          <!-- 导航的坑 -->
+        </li>
+      </ul>
+    </div>
+
+    <!-- 商品列表 -->
+    <div class="m-product">
+      <div class="detail">
+        <!-- 坑 -->
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+      </div>
+      <div class="comments">
+        <div class="title">网友评价</div>
+        <div class="content">
+          <ul>
+            <!-- 加载中的图片 -->
+            <div class="loading">
+              <img src="./images/loading.gif" alt="">
+            </div>
+            <!-- 评论的坑 -->
+          </ul>
+        </div>
+      </div>
+      <div class="more">
+        <a href="#">查看更多评价</a>
+      </div>
+    </div>
+
+
+    <!-- 底部的上部区域 -->
+    <div class="footer-top">
+      <ul class="container">
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+        <li class="backTop">
+          <a href="#">
+            <span><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""></span> 
+            返回顶部
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 底部的下部区域 -->
+    <div class="footer">
+      <p>
+        <span class="app"><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="index.html">慢慢买手机版</a></span> -- 掌上比价平台
+      </p>
+      <p class="address">m.manmanbuy.com</p>
+    </div>
+
+  </div>
+
+  <!-- 导航区域的模板 -->
+  <script type="text/html" id="navTpl">
+    {{each result as v i}}
+    <a href="index.html">首页 ></a>
+    <a href="productlist.html?categoryid={{ v.categoryId }}">{{ v.category }} ></a> {{/each}}
+  </script>
+
+
+  <!-- 商品详情的模板 -->
+  <script type="text/html" id="detailTpl">
+    {{each result as v i}}
+    <div class="title">
+      <h3>{{ v.productName }}</h3>
+    </div>
+    <div class="imgWrap">
+      {{ #v.productImg }}
+      <img class="collect" src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+    </div>
+    <div class="nav">
+      <a href="#">比价购买</a>
+      <a href="#">产品参数</a>
+      <a href="#">评论(2322)</a>
+    </div>
+    {{ #v.bjShop }}
+    </div>
+    <div class="note">
+      * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+    {{/each}}
+  </script>
+
+  <script type="text/html" id="commentTpl">
+    {{each result as v i}}
+    <li>
+      <div class="author clearfix">
+        <span class="fl">{{ v.comName }}</span>
+        <span class="fr">{{ v.comTime }}</span>
+      </div>
+      <div class="from">购买自：{{ v.comFrom }}</div>
+      <p>{{ v.comContent }}</p>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/bijia.js"></script>
+</body>
+
+</html>

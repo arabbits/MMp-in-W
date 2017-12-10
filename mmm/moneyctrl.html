@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-商品详情页</title>
+  <script src="./js/rem.js"></script>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="m-header">
+      <a href="javascript:history.go(-1);" class="fl"><span class="glyphicon glyphicon-menu-left"></span></a>
+      <img class="right fr" src="./images/header_app.png" alt="">
+      <h3>省钱控-最新优惠</h3>
+    </div>
+
+    <!-- 商品区域 -->
+    <div class="m-product">
+      <div class="product">
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+        <!-- 坑 -->
+      </div>
+      <div class="changePages">
+        <span class="w33 fl"><a href="moneyctrl.html?pageid=1" class="prevpage">上一页</a></span>
+        <span class="w33 fl">
+          <select>
+            <!-- 页码下拉框的坑 -->
+            
+          </select>
+        </span>
+        <span class="w33 fl"><a href="moneyctrl.html?pageid=1" class="nextpage">下一页</a></span>
+      </div>
+    </div>
+
+
+    <!-- 底部的上部区域 -->
+    <div class="footer-top">
+      <ul class="container">
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+        <li class="backTop">
+          <a href="#">
+            <span><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""></span> 
+            返回顶部
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 底部的下部区域 -->
+    <div class="footer">
+      <p>
+        <span class="app"><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="index.html">慢慢买手机版</a></span> -- 掌上比价平台
+      </p>
+      <p class="address">m.manmanbuy.com</p>
+    </div>
+
+  </div>
+
+
+
+  <!-- 下拉框的模板 -->
+  <script type="text/html" id="selectTpl">
+
+  </script>
+
+  <!-- 商品列表的模板 -->
+  <script type="text/html" id="productTpl">
+    {{each result as v i}}
+    <div class="item ">
+      <a href="moneyproduct.html?productid={{ v.productId }}">
+          {{ #v.productImgSm }}
+          <div class="product_info">
+            <p class="info">{{ v.productName }}</p>
+            <p class="price">{{ v.productPinkage }}</p>
+            <p class="other">{{ v.productFrom }} | {{ v.productTime }}</p>
+            <span class="icon-comment comments"></span>
+          </div>
+        </a>
+    </div>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>

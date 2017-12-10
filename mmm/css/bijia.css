@@ -1,0 +1,153 @@
+@charset "UTF-8";
+.m-nav {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ccc;
+  background-image: linear-gradient(#fff, #ebebeb);
+  padding: .075rem .25rem;
+}
+.m-nav li {
+  float: left;
+}
+.m-nav li a {
+  color: #000;
+  font-size: .35rem;
+}
+.m-nav .select {
+  line-height: .65rem;
+  font-size: .3rem;
+  display: block;
+  color: #000;
+  padding: 0 .5rem;
+  background-color: #dedede;
+  border: 2px solid #ccc;
+  box-shadow: inset 1px 0 2px 1px #ddd;
+  background: linear-gradient(to top, #f9f9f9, #ccc);
+  float: right;
+  border-radius: .25rem;
+  position: relative;
+  top: .1rem;
+}
+.m-product {
+  background-color: #fff;
+  overflow: hidden;
+}
+.m-product .detail .title {
+  height: 3rem;
+  font-size: .5rem;
+  text-align: center;
+  margin: .4rem auto 0;
+}
+.m-product .detail .title h3 {
+  color: #000;
+  font-weight: normal;
+}
+.m-product .detail .imgWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.m-product .detail .imgWrap img {
+  width: 4.25rem;
+  height: 4.25rem;
+  margin: 0 auto;
+  display: block;
+}
+.m-product .detail .imgWrap .collect {
+  height: .975rem;
+  width: .975rem;
+  position: absolute;
+  right: .5rem;
+  bottom: 0;
+}
+.m-product .detail .nav {
+  width: 100%;
+  font-size: .375rem;
+  margin-top: .5rem;
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+.m-product .detail .nav a {
+  padding: .075rem 0;
+  float: left;
+  width: 33.3333%;
+  border-right: 1px solid #c14d00;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fb0;
+  color: #fff;
+}
+.m-product .detail .nav a:first-child {
+  background-color: #FF9F24;
+}
+.m-product .detail .note {
+  padding: .2rem .25rem;
+  font-size: .3rem;
+  color: #666;
+}
+.m-product table {
+  width: 100%;
+  height: .8rem;
+  border-bottom: 1px solid #ccc;
+}
+.m-product table .center span {
+  width: 1.4rem;
+  height: .6rem;
+}
+.m-product table td {
+  width: 30%;
+  height: 100%;
+}
+.m-product table td a {
+  color: #000;
+  font-size: .375rem;
+}
+.m-product table .p_pic {
+  width: 10%;
+  height: 100%;
+}
+.m-product table .p_pic img {
+  height: .4rem;
+  width: .4rem;
+  margin: auto;
+  position: relative;
+  top: .2rem;
+}
+.m-product table .red {
+  width: 50%;
+  color: red;
+  text-align: right;
+  padding-right: .25rem;
+}
+.m-product .comments .title {
+  margin-top: .25rem;
+  height: .85rem;
+  line-height: .85rem;
+  color: #000;
+  background-color: #ccc;
+  text-align: center;
+  border-top: 3px solid #666;
+}
+.m-product .comments .content li {
+  padding: .25rem;
+  border-bottom: 1px solid #ccc;
+}
+.m-product .comments .content li .from {
+  text-align: right;
+  line-height: 2;
+}
+.m-product .comments .content li p {
+  color: #111;
+  line-height: 1.5;
+}
+.m-product .more {
+  padding: .5rem .25rem 0;
+}
+.m-product .more a {
+  display: block;
+  text-align: center;
+  color: #000;
+  font-size: .4rem;
+  border-radius: .25rem;
+  background-image: linear-gradient(#eee, #ccc);
+  border: 1px solid #ccc;
+}

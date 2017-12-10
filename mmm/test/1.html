@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片懒加载-简单</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <style>
+        ul,li{
+            list-style:none;
+        }
+        .container{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .container li{
+            float: left;
+            margin: 10px 10px;
+        }
+        .container li img{
+            width: 240px;
+            height: 180px;
+        }
+        p{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<ul class="container">
+    <li><a href="#"><img src="" data-src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000123129054_1_200x200.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000123129054_1_200x200.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=sqkb_sources/static/img/news/2016/01bbdeaab8c24230957c3ce7015f51f57ada7c33.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/22/190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://pro.zuyushop.com:8015/ProPic/20164/2016040016521576785.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cuimg.zuyushop.com/cuxiaoPic/201610/2016100013264457573.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cuimg.zuyushop.com/cuxiaoPic/201610/201610001326068420.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=sqkb_sources/static/img/news/2016/b721fe7aa22b3cf6f47334c92ca1418b4f29fb72.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://mmbimg.manmanbuy.com/kindeditor_upload/201610/2016100013125598341.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/22/190_190_0_e542791eee17b144554c477b4279e079.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/22/190_190_0_60d37342301a634baeed943784b9dd05.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/22/190_190_0_d06bf79299046c587db482c887cc14d0.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/22/190_190_0_f8c6add51bb5efb64da2bbc16ad8b6c9.jpg" /></a></li>
+    <li><a href="#"><img src="" data-src="http://img10.360buyimg.com/n7/jfs/t2665/12/2447798947/23230/28bbe69f/5764f0a7Nf52c398c.jpg" /></a></li>
+
+    
+</ul>
+
+<script>
+    $(window).on('scroll',function () {//当页面滚动的时候绑定事件
+        $('.container img').each(function () {//遍历所有的img标签
+            if (checkShow($(this)) && !isLoaded($(this)) ){
+                // 需要写一个checkShow函数来判断当前img是否已经出现在了视野中
+                //还需要写一个isLoaded函数判断当前img是否已经被加载过了
+                loadImg($(this));//符合上述条件之后，再写一个加载函数加载当前img
+            }
+        })
+    })
+    function checkShow($img) { // 传入一个img的jq对象
+        var scrollTop = $(window).scrollTop();  //即页面向上滚动的距离
+        var windowHeight = $(window).height(); // 浏览器自身的高度
+        var offsetTop = $img.offset().top;  //目标标签img相对于document顶部的位置
+
+        if (offsetTop < (scrollTop + windowHeight) && offsetTop > scrollTop) { //在2个临界状态之间的就为出现在视野中的
+            return true;
+        }
+        return false;
+    }
+    function isLoaded ($img) {
+        return $img.attr('data-src') === $img.attr('src'); //如果data-src和src相等那么就是已经加载过了
+    }
+    function loadImg ($img) {
+        $img.attr('src',$img.attr('data-src')); // 加载就是把自定义属性中存放的真实的src地址赋给src属性
+    }
+</script>
+<script src="../lib/jquery/jquery.min.js"></script>
+</body>
+</html>
+

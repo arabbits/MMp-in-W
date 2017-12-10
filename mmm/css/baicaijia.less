@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+.mainColor {
+  background-color: #F4483E;
+}
+
+.m-nav {
+  // width: 100%;
+  height: .95rem;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  padding-right: 1rem;
+  margin-bottom: .125rem;
+
+  span {
+    height: .95rem;
+    width: .95rem;
+    font-size: .45rem;
+    text-align: center;
+    line-height: .95rem;
+    display: block;
+    background-color: #f0f0f0;
+    position: absolute;
+    right: 0;
+  }
+
+  // .mui-scroll {
+  //   // width: 1000% !important ;
+  // }
+
+  ul {
+    width: 1000%;
+  }
+
+  li {
+    float: left;
+    padding: 0 .3rem;  
+
+    a {
+      display: block;
+      height: .9rem;
+      line-height: .9rem;
+      font-size: .375rem;
+      color: #000;
+      border-bottom: 2px solid transparent;
+      box-sizing: border-box;
+    }
+
+    a.now {
+      border-color: #F4483E;
+    }
+  }    
+}
+
+.m-product {
+  margin-bottom: .075rem;
+
+  em,i,del {
+    font-weight: 400;
+  }
+  
+  .item {
+    overflow: hidden;
+    margin-bottom: .125rem;
+    background-color: #fff;
+    padding: .5rem .25rem;
+    
+    .pic {
+      border: 1px solid #ccc;
+      height: 3.25rem;
+      width: 3.25rem;
+      float: left;
+    }
+
+    img {
+      width: 3.25rem;
+      height: 3.25rem;
+      display: block;
+      float: left;
+    }
+
+  .product_info {
+    overflow: hidden;
+    font-size: .35rem;
+    padding-left: .25rem;
+
+    .info1 {
+      font-weight: 400;
+      color: #000;
+    }
+
+    .priceWrap {
+
+      i {
+        margin-right: .125rem;
+      }
+
+      i,em {
+        font-weight: 400;
+        font-size: .3rem;
+      }
+  
+      del {
+        margin-left: .25rem;
+        color: #666;
+        text-decoration: line-through;
+        font-size: .3rem;
+      }
+    }
+
+    p {
+      color: red;
+      padding-right: .25rem;
+      font-size: .45rem;
+      font-weight: bold;
+    }
+
+
+    .bar {
+
+      i {
+        width: 3.25rem;
+        height: 0.54rem;
+        border: 1px solid red;
+        border-radius: .375rem;
+        background-color: #FFB7B7;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        top: .125rem;
+
+        em {
+          width: 75%;
+          height: 100%;
+          background-color: red;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        span {
+          font-size: .15rem;;
+          color: #000;
+          font-weight: 600;
+          position: absolute;
+          top: -.2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #fff;
+          z-index: 222;
+        }
+      }
+
+      b {
+        margin-left: .25rem;
+        font-weight: 400;
+        color: red;
+      }
+    }
+    
+
+    .quan {
+      padding-right: .25rem;
+      margin-top: .25rem;
+
+      a:first-child {
+        float: left;
+        font-size: .3rem;
+        padding: 0 .2rem;
+        border: 1px dashed red;
+        color:red !important;
+      }
+
+      a:last-child {
+        float: right;
+        padding: .1rem .2rem;
+        border-radius: .125rem;
+        background-color: #ff5e5d;
+        color: #fff !important;
+      }
+    }
+  }
+  }
+}

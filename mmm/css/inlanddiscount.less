@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.m-product {
+  background-color: #fff;
+  position: relative;
+
+  li {
+    padding: .25rem;
+    width: 50%;
+    border-bottom: 1px solid #eee;
+    float: left;
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .title {
+      width: 100%;
+      font-size: .4rem;
+      font-weight: bold;
+      color: #000;
+      margin-top: .25rem;
+    }
+
+    .price {
+      color: #ff6c00;
+      font-size: .35rem;
+    }
+
+    .info {
+      margin-top: .25rem;
+    }
+  }
+}
+
+.m-product::before {
+  content: "";
+  height: 100%;
+  border-right: 1px solid #eee;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

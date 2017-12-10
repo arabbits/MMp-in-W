@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-热门品牌排行</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common1.css">
+  <link rel="stylesheet" href="./css/brandTitle.css">
+  <script src="./js/rem.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="m-header">
+      <img class="left fl middle-y-self" src="./images/header_logo.png" alt="">
+      <img class="right fr" src="./images/header_app.png" alt="">
+    </div>
+    <!-- 搜索区域 -->
+    <div class="m-search">
+      <form>
+        <input type="text" class="txt" placeholder="请输入您想比价的商品">
+        <input type="button" class="fr btn_search" value="搜索">
+      </form>
+    </div>
+
+    <!-- 导航区域 -->
+    <div class="m-nav">
+      <ul class="clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+          <a href="category.html">全部分类 ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 热门品牌排行 -->
+    <div class="m-hot">热门品牌排行</div>
+
+    <!-- 分类列表 -->
+    <div class="m-category">
+      <ul>
+        <!-- 加载中的图片 -->
+        <div class="loading">
+          <img src="./images/loading.gif" alt="">
+        </div>
+
+        <!-- 大坑 -->
+
+      </ul>
+    </div>
+
+    <!-- 底部的上部区域 -->
+    <div class="footer-top">
+      <ul class="container">
+        <li class="login"><a href="#">登录</a></li>
+        <li class="register"><a href="#">注册</a></li>
+        <li class="backTop">
+          <a href="#">
+            <span><img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""></span> 
+            返回顶部
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 底部的下部区域 -->
+    <div class="footer">
+      <p>
+        <span class="app"><a href="javascript:;">手机APP下载</a></span>
+        <span><a href="index.html">慢慢买手机版</a></span> -- 掌上比价平台
+      </p>
+      <p class="address">m.manmanbuy.com</p>
+    </div>
+
+  </div>
+
+
+  <!-- 分类标题的模板 -->
+  <script type="text/html" id="brandTpl">
+    {{each result as v i}}
+    <li>
+      <a href="javascript:;" class="title" data-brandtitleid="{{ v.brandTitleId }}" data-brandtitle="{{ v.brandTitle }}">
+          {{ v.brandTitle }}
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brandTitle.js"></script>
+</body>
+
+</html>
